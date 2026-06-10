@@ -2,15 +2,63 @@
 
 The **AI-powered technical documentation company.** A starter package of agent definitions, skills, and workflows that turn documentation requests into published, reviewed, and maintained documents — with the human writer as creative director.
 
+**Current version:** [v0.1.0](https://github.com/Wangxujun0516/docdirector-agency/releases/tag/v0.1.0) — Initial release.
+
 ## Overview
 
 DocDirector Agency is a structured set of **9 specialized agents**, **8 reusable skills**, and **4 workflow definitions** that orchestrate the full documentation lifecycle: research, outlining, drafting, code examples, visualization, multi-pass review, maintenance monitoring, and analytics.
 
-## Quick Demo
+## Live Demo
 
-Here's what the agency produced when given a one-sentence brief: *"Document a POST /api/v1/translations endpoint for a translation API. Target audience: frontend engineers."*
+Given this one-sentence brief — *"Document a POST /api/v1/translations endpoint for a translation API called LinguaAPI. Target audience: frontend engineers."* — the agency produced the following output through the **New API Endpoint** workflow:
 
-The output included a full API reference with parameters, error handling, rate limits, examples in cURL/Node.js/Python, and a Mermaid sequence diagram — all produced by routing through the Research → Outline → Draft → Code Sample → Review pipeline. [See the full output in the live demo.](#)
+---
+
+**POST /api/v1/translations** — Translate Text
+
+Translate a text string from one language to another.
+
+### Request Body
+
+| Name | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `text` | string | Yes | — | Source text to translate. Max 5000 chars. |
+| `source_lang` | string | Yes | — | Source language code (ISO 639-1), e.g. `en`, `ja` |
+| `target_lang` | string | Yes | — | Target language code (ISO 639-1), e.g. `es`, `de` |
+| `tone` | string | No | `neutral` | Tone: `neutral`, `formal`, or `casual` |
+
+### Example (cURL)
+
+```bash
+curl -X POST https://api.linguaapi.com/v1/translations \
+  -H "Authorization: Bearer sk-abc123" \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Hello, how are you?", "source_lang": "en", "target_lang": "es", "tone": "casual"}'
+```
+
+### Example Response (200 OK)
+
+```json
+{
+  "translated_text": "¡Hola! ¿Cómo estás?",
+  "source_lang": "en",
+  "target_lang": "es",
+  "tone": "casual",
+  "character_count": 18,
+  "credits_used": 1
+}
+```
+
+### Error Handling
+
+| Status | Scenario |
+|---|---|
+| 400 | Missing or invalid parameters |
+| 401 | Invalid or missing API key |
+| 422 | Unsupported language pair |
+| 429 | Rate limit exceeded (includes retry header) |
+
+The full output included examples in Node.js, Python, and cURL, a Mermaid sequence diagram, and a quality review report — all produced by routing through the agency pipeline.
 
 ## Package Structure
 
@@ -65,6 +113,14 @@ docdirector-agency/
 | `new-api-endpoint` | API endpoint spec or PR | API reference with tested examples |
 | `full-product-guide` | New feature or major release | Comprehensive user guide |
 | `maintenance-sweep` | Code changes / scheduled scan | Updated docs with freshness report |
+
+### Install via companies.sh
+
+```bash
+npx companies.sh add Wangxujun0516/docdirector-agency
+```
+
+This fetches the latest release tag (currently `v0.1.0`).
 
 ### Adding new skills
 
