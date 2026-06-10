@@ -6,12 +6,19 @@ The **AI-powered technical documentation company.** A starter package of agent d
 
 DocDirector Agency is a structured set of **9 specialized agents**, **8 reusable skills**, and **4 workflow definitions** that orchestrate the full documentation lifecycle: research, outlining, drafting, code examples, visualization, multi-pass review, maintenance monitoring, and analytics.
 
+## Quick Demo
+
+Here's what the agency produced when given a one-sentence brief: *"Document a POST /api/v1/translations endpoint for a translation API. Target audience: frontend engineers."*
+
+The output included a full API reference with parameters, error handling, rate limits, examples in cURL/Node.js/Python, and a Mermaid sequence diagram — all produced by routing through the Research → Outline → Draft → Code Sample → Review pipeline. [See the full output in the live demo.](#)
+
 ## Package Structure
 
 ```
 docdirector-agency/
 ├── COMPANY.md              # Company mission, philosophy, and agent/skill index
 ├── TEAM.md                 # Team structure, reporting, and handoff protocols
+├── LICENSE                 # MIT license
 ├── agents/                 # Agent definitions
 │   ├── director/AGENTS.md    # Orchestrator, quality gate
 │   ├── researcher/AGENTS.md  # Source investigation
@@ -71,6 +78,10 @@ Add a directory under `agents/<role-name>/` with an `AGENTS.md` containing front
 
 - Definition-only: no runtime dependencies.
 - Consumed by AI coding agents (Codex, etc.) via the agent definition and skill files.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
 
 ## Contributing
 

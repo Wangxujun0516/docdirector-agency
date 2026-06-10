@@ -1,4 +1,4 @@
----
+﻿---
 schema: agentcompanies/v1
 name: DocDirector Agency
 description: AI-native technical documentation company. Human writers direct specialized AI agents to research, draft, review, maintain, and elevate documentation far beyond raw LLM output.
@@ -24,7 +24,7 @@ goals:
 
 **The AI-powered technical documentation company.**
 
-Writers and engineering teams install this company to get a full **documentation agency** on demand: research agents, drafting specialists, ruthless reviewers, maintenance monitors, and diagram/code experts — all orchestrated so the human remains the creative director and final approver.
+Writers and engineering teams install this company to get a full **documentation agency** on demand: research agents, drafting specialists, ruthless reviewers, maintenance monitors, and diagram/code experts 鈥?all orchestrated so the human remains the creative director and final approver.
 
 ## How It Works
 
@@ -43,7 +43,7 @@ Writers and engineering teams install this company to get a full **documentation
 
 ## Key Agents (see agents/ folder)
 
-- **Documentation Director** — You / Lead human-equivalent agent
+- **Documentation Director** 鈥?You / Lead human-equivalent agent
 - **Research Agent**
 - **Outlining & Structuring Agent**
 - **Drafting Agent**
@@ -69,5 +69,5 @@ Writers and engineering teams install this company to get a full **documentation
 Install with:
 
 ```bash
-npx companies.sh add YOUR-GITHUB-USER/docdirector-agency
+npx companies.sh add Wangxujun0516/docdirector-agency
 ```
