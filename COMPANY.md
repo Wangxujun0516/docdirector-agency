@@ -24,10 +24,9 @@ goals:
 
 **The AI-powered technical documentation company.**
 
-Writers and engineering teams install this company to get a full **documentation agency** on demand: research agents, drafting specialists, ruthless reviewers, maintenance monitors, and diagram/code experts 鈥?all orchestrated so the human remains the creative director and final approver.
+Writers and engineering teams install this company to get a full **documentation agency** on demand: research agents, drafting specialists, ruthless reviewers, maintenance monitors, and diagram/code experts — all orchestrated so the human remains the creative director and final approver.
 
 ## How It Works
-
 1. **Director (You)** gives high-level direction and makes final calls.
 2. Specialized agents handle first drafts, research, examples, diagrams, and updates.
 3. Review agents flag hallucinations, inconsistencies, gaps, and tone issues.
@@ -35,15 +34,13 @@ Writers and engineering teams install this company to get a full **documentation
 5. Everything lives in Markdown/Git for version control and portability.
 
 ## Core Philosophy
-
 - **Human in the loop** for judgment, empathy, domain nuance, and quality.
 - **AI as tireless junior team** for speed and scale.
 - **Output > Raw Generation**: Clarity, precision, audience empathy, and strategic value first.
 - Compatible with docs-as-code (MDX, GitHub, Mintlify-style sites, etc.).
 
 ## Key Agents (see agents/ folder)
-
-- **Documentation Director** 鈥?You / Lead human-equivalent agent
+- **Documentation Director**
 - **Research Agent**
 - **Outlining & Structuring Agent**
 - **Drafting Agent**
@@ -54,7 +51,6 @@ Writers and engineering teams install this company to get a full **documentation
 - **Analytics & Feedback Agent**
 
 ## Included Skills (see skills/ folder)
-
 - doc-research
 - api-doc-generation
 - style-guide-enforcement
@@ -62,12 +58,10 @@ Writers and engineering teams install this company to get a full **documentation
 - freshness-monitoring
 - mermaid-diagram-generation
 - user-empathy-mapping
-- ... (and more)
+- review-and-quality
 
 ## Getting Started
-
 Install with:
-
 ```bash
-npx companies.sh add Wangxujun0516/docdirector-agency
+npx companies.sh add https://github.com/Wangxujun0516/docdirector-agency
 ```
