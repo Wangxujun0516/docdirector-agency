@@ -1,0 +1,15 @@
+﻿# OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# Temp files
+*.tmp
+*.log
+
+# IDE
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.sublime-project
+*.sublime-workspace
